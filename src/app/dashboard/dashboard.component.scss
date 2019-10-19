@@ -1,0 +1,40 @@
+.section{
+    background: #5050dd;
+    color: #fff;
+
+    .heading{
+        height: 100px;
+        position: relative;
+        top: 26px;
+        font-size: 35px;
+        // width: 200px;
+        text-align: center;
+    }
+
+    ul{
+        list-style-type: none;
+        padding: 0;
+        position: relative;
+        top: 15%;
+
+        li{
+            background: #6b6bed;
+            padding: 20px 10px 15px 15px;
+            font-size: 14px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+
+            div{
+                display: inline-block;
+            }
+        }
+    }
+
+    .arrowDiv{
+        position: relative;
+        top: -10px;
+        margin: 0;
+        padding: 0;
+        cursor: pointer;
+    }
+}

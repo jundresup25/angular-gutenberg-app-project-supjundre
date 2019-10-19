@@ -1,0 +1,13 @@
+<div class="container-fluid">
+  <div class="col-md-4 section">
+    <div class="heading">Gutenberg Project</div>
+    <ul>
+      <li class="list-item cp" *ngFor="let item of bookCategory" [routerLink]="['/booklist', item.name]">
+        <div>{{item.name}}</div>
+        <div class="pull-right arrowDiv">
+          <img src="assets/images/ic_right_arrow.png" alt="arrow" width="40">
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

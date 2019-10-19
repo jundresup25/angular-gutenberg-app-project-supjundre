@@ -1,16 +1,17 @@
 <div class="container-fluid">
-  <div class="col-md-4 section bookSection" id="infinite-scroller" appInfiniteScroller scrollPerecnt="70" [immediateCallback]="true" [scrollCallback]="scrollCallback">
+ <div class="row">
+   <div class="col-sm-4 col-md-4 col-lg-4 section bookSection" id="infinite-scroller" appInfiniteScroller scrollPerecnt="70" [immediateCallback]="true" [scrollCallback]="scrollCallback">
     <div class="header">
       <div class="row search">
-        <div class="col-md-1 cp" routerLink="/dashboard">
-            <img src="assets/images/ic_left_arrow.png" alt="arrow" width="40">
+        <div class="col-sm-1 col-md-1 col-lg-1 cp disinline" routerLink="/dashboard">
+            <img src="https://i.ibb.co/Ksds9nF/ic-left-arrow.png" alt="arrow" width="40">
         </div>
-        <div class="col-md-9">
-            <img class="searchIcon" src="assets/images/ic_search.png" alt="search" width="40">
-            <input class="searchInput" type="text" name="name" [(ngModel)]="searchbook" (input)="onSearchChange($event.target.value)">
-            <img class="closeIcon cp" src="assets/images/ic_close.png" alt="close" width="40" (click)="cancelFilter()">
+        <div class="col-sm-9 col-md-9 col-lg-9 disinline">
+            <img class="searchIcon" src="https://i.ibb.co/2y3Pdy0/ic-search.png" alt="search" width="40">
+            <input class="searchInput" type="text" name="name" [(ngModel)]="searchbook" (input)="onSearchChange($event.target.value)" autocomplete="off">
+            <img class="closeIcon cp" src="https://i.ibb.co/TBN6z39/ic-close.png" alt="close" width="40" (click)="cancelFilter()">
         </div>
-        <div class="col-md-2 cancel cp" *ngIf="searchbook" (click)="cancelFilter()">
+        <div class="col-sm-2 col-md-2 col-lg-2 cancel cp disinline" *ngIf="searchbook" (click)="cancelFilter()">
             <span>cancel</span>
         </div>
       </div>
@@ -19,11 +20,12 @@
         <div class="title">{{bookType}}</div>
         <div class="content" *ngFor="let item of bookList">
             <!-- no images are available for books in api response, deafult img is used -->
-            <img class="bookimg cp" src="assets/images/images.jpg" alt="Book" width="140" height="150"
+            <img class="bookimg cp" src="https://i.ibb.co/qDjz3qq/images.jpg" alt="Book" width="140" height="150"
             (click)="getBookURL(item)">
             <div class="bookname">{{item.title | delimit : '18'}}</div>
             <div class="authorname" *ngIf="item.authors.length != 0">{{item.authors[0].name | delimit : '18'}}</div>
           </div>
       </div>
   </div>
+ </div>
 </div>

@@ -1,1 +1,17 @@
 /* Add application styles & imports to this file! */
+
+.disinline{
+  display: inline-block !important;
+}
+
+.cp{
+    cursor: pointer;
+}
+
+img:focus{
+    outline: none !important;
+}
+
+div:focus{
+  outline: none !important;
+}
